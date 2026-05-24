@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+  <title>Trophy</title>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M16 12c0 9.941 6.059 18 16 18s16-8.059 16-18V6H16v6z" fill="#F6C94C"/>
+    <path d="M48 6v6c0 4.418-3.582 8-8 8H24c-4.418 0-8-3.582-8-8V6" stroke="#D49B2A" stroke-width="2"/>
+    <path d="M18 30v4c0 6.627 9.373 12 20 12s20-5.373 20-12v-4" fill="#E8A93A"/>
+    <path d="M18 30v4c0 6.627 9.373 12 20 12s20-5.373 20-12v-4" stroke="#D49B2A" stroke-width="1"/>
+    <path d="M24 46h16v6H24z" fill="#C6861E"/>
+    <path d="M12 14H6v6c0 6.627 4.373 12 10 12v-6c-3.314 0-6-2.686-6-6V14z" fill="#F6C94C"/>
+    <path d="M52 14h6v6c0 3.314-2.686 6-6 6v6c5.627 0 10-5.373 10-12v-6h-6z" fill="#F6C94C"/>
+    <circle cx="32" cy="14" r="3" fill="#FFF" opacity="0.2"/>
+  </g>
+</svg>

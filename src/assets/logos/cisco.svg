@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="ciscoGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0085c3" />
+      <stop offset="100%" stop-color="#00b8f4" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="80" rx="16" fill="#0a2640"/>
+  <text x="100" y="50" fill="url(#ciscoGrad)" font-family="Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle">Cisco</text>
+</svg>

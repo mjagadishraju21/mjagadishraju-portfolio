@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.custom-cursor-ring,
+.custom-cursor-dot {
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.custom-cursor-ring {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  border-radius: 9999px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.35), 0 0 45px rgba(168, 85, 247, 0.15);
+}
+
+.custom-cursor-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: rgba(34, 211, 238, 0.95);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.7), 0 0 35px rgba(168, 85, 247, 0.2);
+}
