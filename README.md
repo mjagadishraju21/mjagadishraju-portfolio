@@ -1,16 +1,137 @@
-# React + Vite
+# 🚀 Muddaluru Jagadish Raju — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and interactive personal portfolio website built using **React.js**, **Vite**, **Tailwind CSS**, and **Framer Motion**.
+This portfolio showcases my projects, technical skills, certifications, achievements, leadership experience, and professional journey in the field of **Artificial Intelligence & Machine Learning**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Features
 
-## React Compiler
+* ⚡ Modern UI/UX Design
+* 🎨 Responsive Dark Theme
+* ✨ Smooth Animations & Transitions
+* 📱 Fully Responsive for Mobile & Desktop
+* 🚀 Fast Performance with Vite
+* 🧠 AI/ML Focused Portfolio
+* 🏆 Certifications & Achievements Section
+* 🎖️ NCC & Leadership Experience
+* 📂 Project Showcase
+* 📞 Contact & Social Links
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+
+* React.js
+* Vite
+* Tailwind CSS
+* Framer Motion
+
+### Libraries & Tools
+
+* React Icons
+* React Scroll
+* React Parallax Tilt
+* Git & GitHub
+* Vercel Deployment
+
+---
+
+## 📂 Portfolio Sections
+
+* Hero Section
+* About Me
+* Technical Skills
+* Featured Projects
+* Experience
+* Achievements
+* Certifications
+* Leadership & NCC
+* Contact
+* Resume Download
+
+---
+
+## 🚀 Projects Included
+
+* Crop Disease Detection
+* House Price Prediction
+* Mall Customer Segmentation
+* Smart Classroom Energy Optimization
+* Hand Gesture Recognition
+* SVM Cats vs Dogs Classification
+
+---
+
+## 📜 Certifications
+
+* Cisco Certifications
+* Salesforce Certifications
+* Generative AI Certifications
+* DataCamp ML Certifications
+* NCC A & B Certificates
+
+---
+
+## 🌐 Live Website
+
+👉 https://mjagadishraju-portfolio.vercel.app/
+
+---
+
+## 📬 Contact Me
+
+* 📧 Email: [jagadishrajumuddaluru@gmail.com](mailto:jagadishrajumuddaluru@gmail.com)
+* 💼 LinkedIn: https://www.linkedin.com/in/muddaluru-jagadish-raju/
+* 🐙 GitHub: https://github.com/mjagadishraju21
+* 📸 Instagram: https://www.instagram.com/mjagadishraju/
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/mjagadishraju21/mjagadishraju-portfolio.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd mjagadishraju-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📌 Deployment
+
+This portfolio is deployed using **Vercel**.
+
+---
+
+## 👨‍💻 Author
+
+### Muddaluru Jagadish Raju
+
+AIML Engineer | Full Stack Developer | AI Enthusiast | NCC Cadet
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!

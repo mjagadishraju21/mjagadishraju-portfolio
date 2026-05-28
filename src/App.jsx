@@ -9,36 +9,26 @@ import Certifications from "./sections/Certifications"
 import Leadership from "./sections/Leadership"
 import Contact from "./sections/Contact"
 import Footer from "./sections/Footer"
-
 import BackToTop from "./components/BackToTop"
 import ParticleBackground from "./components/ParticleBackground"
 import CursorGlow from "./components/CursorGlow"
 
 function App() {
   return (
-    <div className="relative min-h-screen bg-[#03060e] text-white overflow-x-hidden">
-
-      {/* Background */}
+    <div className="relative min-h-screen bg-[#03060e] text-white overflow-x-hidden cursor-none">
       <ParticleBackground />
-
-      {/* Cursor */}
       <CursorGlow />
-
-      {/* Website Content */}
-      <div className="relative z-10">
-        <Navbar />
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Achievements />
-        <Certifications />
-        <Leadership />
-        <Contact />
-        <Footer />
-      </div>
-
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Experience />
+      <Achievements />
+      <Certifications />
+      <Leadership />
+      <Contact />
+      <Footer />
       <BackToTop />
     </div>
   )
