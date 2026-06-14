@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Link } from "react-scroll"
 import resume from "../assets/Jagadish_Resume_29_April_.pdf"
+import ResumeModal from "../components/ResumeModal"
 import profile from "../assets/profile/jagadish.png"
 import { FiCode, FiTrendingUp, FiZap } from "react-icons/fi"
 
@@ -95,19 +96,35 @@ function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="mt-8 flex flex-col sm:flex-row gap-6">
+<div className="mt-8 flex flex-wrap gap-4">
 
-            <a href={resume} download>
-              <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-linear-to-r from-purple-500 to-pink-500 rounded-2xl text-white font-semibold transition duration-300 hover:shadow-lg"
-              >
-                Download Resume
-              </motion.button>
-            </a>
+  <ResumeModal />
 
-          </div>
+  <a href={resume} download>
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-8 py-4 border border-cyan-400/30 bg-white/5 backdrop-blur-md rounded-2xl text-white font-semibold hover:bg-white/10 transition duration-300"
+    >
+      Download Resume
+    </motion.button>
+  </a>
+
+  <Link
+    to="contact"
+    smooth={true}
+    duration={500}
+  >
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-2xl text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/30 transition duration-300"
+    >
+      Contact Me
+    </motion.button>
+  </Link>
+
+</div>
 
         </div>
 
