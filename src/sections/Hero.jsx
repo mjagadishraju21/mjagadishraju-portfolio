@@ -98,16 +98,6 @@ function Hero() {
 
             <ResumeModal />
 
-            <a href={resume} download>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-400/30 bg-white/5 backdrop-blur-md rounded-2xl text-white font-semibold hover:bg-white/10 transition duration-300"
-              >
-                Download Resume
-              </motion.button>
-            </a>
-
             <Link
               to="contact"
               smooth={true}
