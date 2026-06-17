@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Link } from "react-scroll"
 import resume from "../assets/Jagadish_Resume_29_April_.pdf"
-import profile from "../assets/profile/jagadish.png"
+import profile from "jagadish.jpg"
 import ResumeModal from "../components/ResumeModal"
 import { FiCode, FiTrendingUp, FiZap } from "react-icons/fi"
 
