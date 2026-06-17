@@ -32,12 +32,12 @@ function ResumeModal() {
               </button>
             </div>
 
-            {/* PDF */}
-            <iframe
-              src={resume}
-              title="Resume"
-              className="w-full h-[calc(100%-80px)]"
-            />
+           {/* PDF */}
+<iframe
+  src={`${resume}#toolbar=1&navpanes=0&scrollbar=1`}
+  title="Resume"
+  className="w-full h-[calc(100%-80px)] bg-white"
+/>
 
             {/* Download Button */}
             <a
