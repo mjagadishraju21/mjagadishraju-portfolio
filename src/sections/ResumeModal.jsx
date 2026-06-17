@@ -14,9 +14,9 @@ function ResumeModal() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[999999] bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
           
-          <div className="bg-[#0a0a0a] border border-cyan-400/20 rounded-3xl w-full max-w-5xl h-[90vh] overflow-hidden relative">
+          <div className="relative isolate bg-[#0a0a0a] border border-cyan-400/20 rounded-3xl w-full max-w-6xl h-[90vh] overflow-hidden">
 
             {/* Header */}
             <div className="flex justify-between items-center p-5 border-b border-gray-800">
