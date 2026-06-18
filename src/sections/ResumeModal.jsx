@@ -1,8 +1,20 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import resume from "../assets/Jagadish_Resume_29_April_.pdf"
 
 function ResumeModal() {
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"
+    }
+  }, [isOpen])
 
   return (
     <>
@@ -14,8 +26,10 @@ function ResumeModal() {
       </button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-[999999] bg-black/95 backdrop-blur-md flex items-center justify-center p-4">
-          
+        <div
+          className="fixed inset-0 z-[999999] bg-black/95 backdrop-blur-md flex items-center justify-center p-4"
+          onWheel={(e) => e.stopPropagation()}
+        >
           <div className="relative isolate bg-[#0a0a0a] border border-cyan-400/20 rounded-3xl w-full max-w-6xl h-[90vh] overflow-hidden">
 
             {/* Header */}
@@ -32,18 +46,18 @@ function ResumeModal() {
               </button>
             </div>
 
-           {/* PDF */}
-<iframe
-  src={`${resume}#toolbar=1&navpanes=0&scrollbar=1`}
-  title="Resume"
-  className="w-full h-[calc(100%-80px)] bg-white"
-/>
+            {/* PDF Viewer */}
+            <iframe
+              src={`${resume}#toolbar=1&navpanes=0&scrollbar=1`}
+              title="Resume"
+              className="w-full h-[calc(100%-80px)] bg-white"
+            />
 
             {/* Download Button */}
             <a
               href={resume}
               download
-              className="absolute bottom-5 right-5 px-6 py-3 bg-cyan-500 text-black font-bold rounded-xl hover:bg-cyan-400"
+              className="absolute bottom-5 right-5 px-6 py-3 bg-cyan-500 text-black font-bold rounded-xl hover:bg-cyan-400 transition"
             >
               Download PDF
             </a>
