@@ -1,8 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Link } from "react-scroll"
-import resume from "../assets/Jagadish_Resume_29_April_.pdf"
 import profile from "../assets/profile/jagadish.jpg"
-import ResumeModal from "../components/ResumeModal"
 import { FiCode, FiTrendingUp, FiZap } from "react-icons/fi"
 
 function Hero() {
@@ -20,8 +18,8 @@ function Hero() {
       id="top"
       className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden px-6 pt-20"
     >
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-linear-to-br from-cyan-900/10 via-black to-purple-900/10 animate-pulse"></div>
+      {/* Background */}
+      <div className="absolute inset-0 bg-linear-to-br from-cyan-900/10 via-black to-purple-900/10 animate-pulse" />
 
       {/* Glow Effects */}
       <motion.div
@@ -49,7 +47,7 @@ function Hero() {
         transition={{ duration: 1 }}
         className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center"
       >
-        {/* LEFT CONTENT */}
+        {/* Left Content */}
         <div className="text-center md:text-left">
           <p className="text-cyan-400 uppercase tracking-[0.3em] mb-6 text-sm md:text-base font-semibold">
             Welcome To My Portfolio
@@ -96,7 +94,19 @@ function Hero() {
           {/* Buttons */}
           <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
 
-            <ResumeModal />
+            <a
+              href="/Jagadish_Resume_29_April_.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl text-black font-bold hover:shadow-lg hover:shadow-cyan-500/30 transition duration-300"
+              >
+                View Resume
+              </motion.button>
+            </a>
 
             <Link
               to="contact"
@@ -106,7 +116,7 @@ function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-linear-to-r from-cyan-500 to-purple-500 rounded-2xl text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/30 transition duration-300"
+                className="px-8 py-4 border border-cyan-400 rounded-2xl text-cyan-400 font-semibold hover:bg-cyan-400 hover:text-black transition duration-300"
               >
                 Contact Me
               </motion.button>
@@ -115,7 +125,7 @@ function Hero() {
           </div>
         </div>
 
-        {/* RIGHT IMAGE */}
+        {/* Right Image */}
         <div className="flex justify-center">
           <motion.div
             style={{ y: parallaxY }}
@@ -134,7 +144,7 @@ function Hero() {
             }}
             className="relative perspective-1000"
           >
-            <div className="absolute inset-0 bg-cyan-500 rounded-full blur-3xl opacity-20"></div>
+            <div className="absolute inset-0 bg-cyan-500 rounded-full blur-3xl opacity-20" />
 
             <img
               src={profile}
