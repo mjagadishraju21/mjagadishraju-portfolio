@@ -49,20 +49,20 @@ function Hero() {
       >
         {/* Left Content */}
         <div className="text-center md:text-left">
-          <p className="text-cyan-400 uppercase tracking-[0.3em] mb-6 text-sm md:text-base font-semibold">
-            Welcome To My Portfolio
-          </p>
+          <p className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-cyan-300 uppercase tracking-[0.2em] text-xs sm:text-sm font-semibold mb-6">
+  Welcome To My Portfolio
+</p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight mb-2">
-            Muddaluru
+          <h1>
+            
             <span className="bg-linear-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              {" "}Jagadish Raju
+              Muddaluru Jagadish Raju
             </span>
           </h1>
 
           <p className="mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed max-w-2xl">
-            AI ML Engineer • Product Developer • AI Enthusiast
-          </p>
+  AI/ML Engineer • Full Stack Developer • AI Enthusiast
+</p>
 
           {/* Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 mb-10">
