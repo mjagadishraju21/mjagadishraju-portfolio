@@ -16,7 +16,7 @@ function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden px-6 pt-20"
+      className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden px-5 sm:px-8 lg:px-12 pt-24"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-linear-to-br from-cyan-900/10 via-black to-purple-900/10 animate-pulse" />
@@ -45,7 +45,7 @@ function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center"
+        className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center"
       >
         {/* Left Content */}
         <div className="text-center md:text-left">
@@ -53,19 +53,19 @@ function Hero() {
             Welcome To My Portfolio
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-2">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold leading-tight mb-2">
             Muddaluru
             <span className="bg-linear-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               {" "}Jagadish Raju
             </span>
           </h1>
 
-          <p className="mt-8 text-lg md:text-2xl text-gray-400 leading-relaxed">
-            AIML Engineer • Product Developer • AI Enthusiast
+          <p className="mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed max-w-2xl">
+            AI ML Engineer • Product Developer • AI Enthusiast
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 mt-12 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10 mb-10">
             {stats.map((stat, index) => {
               const Icon = stat.icon
 
@@ -92,7 +92,7 @@ function Hero() {
           </div>
 
           {/* Buttons */}
-          <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
 
             <a
               href="/Jagadish_Resume_29_April_.pdf"
