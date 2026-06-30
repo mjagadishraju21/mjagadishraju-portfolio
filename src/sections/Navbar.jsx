@@ -1,7 +1,8 @@
+```jsx
 import { Link } from "react-scroll"
 import { useState } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,29 +20,34 @@ function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-md text-white px-6 md:px-8 py-4 z-50 border-b border-gray-800">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 h-20 flex items-center justify-between">
+
         {/* Logo */}
         <Link
           to="top"
           smooth={true}
           duration={500}
-          className="text-lg md:text-2xl font-bold tracking-wide cursor-pointer hover:text-cyan-400 transition duration-300"
+          className="cursor-pointer"
         >
-          MUDDALURU JAGADISH RAJU
+          <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold tracking-wide text-white hover:text-cyan-400 transition">
+            MUDDALURU
+            <span className="hidden sm:inline"> JAGADISH RAJU</span>
+          </h1>
         </Link>
 
-        {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-6 text-gray-300 font-medium">
-          {navLinks.map((link, index) => (
-            <li key={index}>
+        {/* Desktop Navigation */}
+        <ul className="hidden xl:flex items-center gap-8 text-[15px] font-medium text-gray-300">
+          {navLinks.map((link) => (
+            <li key={link.to}>
               <Link
                 to={link.to}
                 smooth={true}
                 duration={500}
                 offset={-80}
-                className="hover:text-cyan-400 cursor-pointer transition duration-300"
+                spy={true}
+                activeClass="text-cyan-400"
+                className="cursor-pointer transition hover:text-cyan-400"
               >
                 {link.name}
               </Link>
@@ -51,41 +57,47 @@ function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-2xl cursor-pointer"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="xl:hidden text-2xl text-white hover:text-cyan-400 transition"
         >
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="lg:hidden mt-4 pb-4 border-t border-gray-800"
-        >
-          <ul className="flex flex-col gap-4 pt-4 text-gray-300 font-medium">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <Link
-                  to={link.to}
-                  smooth={true}
-                  duration={500}
-                  offset={-80}
-                  className="hover:text-cyan-400 cursor-pointer transition duration-300 block py-2"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -25 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -25 }}
+            transition={{ duration: 0.25 }}
+            className="xl:hidden bg-[#050505]/95 backdrop-blur-xl border-t border-white/10"
+          >
+            <ul className="flex flex-col py-4">
+              {navLinks.map((link) => (
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    spy={true}
+                    activeClass="text-cyan-400"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-6 py-4 text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition cursor-pointer"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }
 
 export default Navbar
+```
