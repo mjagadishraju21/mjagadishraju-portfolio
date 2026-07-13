@@ -44,56 +44,61 @@ function Education() {
   return (
     <section
       id="education"
-      className="min-h-screen bg-black text-white px-6 py-24 relative overflow-hidden"
+      className="min-h-screen bg-black text-white px-4 sm:px-6 md:px-8 lg:px-12 py-20 md:py-24 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/5 via-black to-purple-900/5"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="w-full max-w-6xl mx-auto relative z-10">
 
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-16 md:mb-20"
         >
-          <h2 className="text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Academic
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
               {" "}Journey
             </span>
           </h2>
 
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+          <p className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto px-2 sm:px-0">
             My educational background has built a strong foundation in
             technology, innovation, problem-solving, and Artificial Intelligence.
           </p>
         </motion.div>
 
         {/* Stats */}
-        <div className="grid md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6 text-center">
-            <h3 className="text-3xl font-bold text-cyan-400">8.08</h3>
-            <p className="text-gray-400">CGPA</p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 md:mb-16">
+
+          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-5 sm:p-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-bold text-cyan-400">8.08</h3>
+            <p className="text-sm sm:text-base text-gray-400">CGPA</p>
           </div>
 
-          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6 text-center">
-            <h3 className="text-3xl font-bold text-cyan-400">600/600</h3>
-            <p className="text-gray-400">SSC</p>
+          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-5 sm:p-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-bold text-cyan-400">600/600</h3>
+            <p className="text-sm sm:text-base text-gray-400">SSC</p>
           </div>
 
-          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6 text-center">
-            <h3 className="text-3xl font-bold text-cyan-400">847</h3>
-            <p className="text-gray-400">Intermediate</p>
+          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-5 sm:p-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-bold text-cyan-400">847</h3>
+            <p className="text-sm sm:text-base text-gray-400">Intermediate</p>
           </div>
 
-          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-6 text-center">
-            <h3 className="text-3xl font-bold text-cyan-400">2027</h3>
-            <p className="text-gray-400">Graduation</p>
+          <div className="bg-white/5 border border-cyan-400/20 rounded-2xl p-5 sm:p-6 text-center">
+            <h3 className="text-2xl sm:text-3xl font-bold text-cyan-400">2027</h3>
+            <p className="text-sm sm:text-base text-gray-400">Graduation</p>
           </div>
+
         </div>
 
-        <div className="space-y-8">
+        {/* Education Cards */}
+        <div className="space-y-6 md:space-y-8">
+
           {education.map((item, index) => (
             <motion.div
               key={index}
@@ -101,42 +106,49 @@ function Education() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="backdrop-blur-xl bg-white/5 border border-cyan-400/20 rounded-3xl p-8 hover:border-cyan-400/50 transition duration-300"
+              className="backdrop-blur-xl bg-white/5 border border-cyan-400/20 rounded-3xl p-5 sm:p-6 md:p-8 hover:border-cyan-400/50 transition duration-300"
             >
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-5">
 
-                <div>
-                  <h3 className="text-2xl font-bold text-cyan-400">
+                <div className="flex-1">
+
+                  <h3 className="text-xl sm:text-2xl font-bold text-cyan-400">
                     {item.degree}
                   </h3>
 
-                  <p className="text-lg text-white mt-2">
+                  <p className="text-base sm:text-lg text-white mt-2 leading-relaxed">
                     {item.field}
                   </p>
 
-                  <p className="text-gray-400 mt-2">
+                  <p className="text-sm sm:text-base text-gray-400 mt-2">
                     {item.institution}
                   </p>
+
                 </div>
 
-                <div className="text-left md:text-right">
-                  <p className="text-cyan-300 font-semibold">
+                <div className="text-left md:text-right shrink-0">
+
+                  <p className="text-cyan-300 font-semibold text-sm sm:text-base">
                     {item.year}
                   </p>
 
-                  <p className="text-gray-300 mt-2">
+                  <p className="text-gray-300 mt-2 text-sm sm:text-base">
                     {item.result}
                   </p>
+
                 </div>
+
               </div>
 
-              <ul className="mt-6 space-y-2 text-gray-400">
+              <ul className="mt-5 md:mt-6 space-y-2 text-sm sm:text-base text-gray-400 leading-relaxed">
                 {item.details.map((detail, i) => (
                   <li key={i}>• {detail}</li>
                 ))}
               </ul>
+
             </motion.div>
           ))}
+
         </div>
 
       </div>
