@@ -53,11 +53,15 @@ function Hero() {
             Welcome To My Portfolio
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Muddaluru Jagadish Raju
-            </span>
-          </h1>
+          {/* Optimized Main Heading */}
+<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-tight block text-center lg:text-left">
+  <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+    Muddaluru
+  </span>
+  <span className="block bg-gradient-to-r from-purple-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+    Jagadish Raju
+  </span>
+</h1>
 
           <p className="mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed max-w-2xl mx-auto lg:mx-0">
             AI/ML Engineer • Full Stack Developer • AI Enthusiast
