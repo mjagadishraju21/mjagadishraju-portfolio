@@ -28,8 +28,7 @@ function Hero() {
           opacity: [0.2, 0.3, 0.2],
         }}
         transition={{ duration: 8, repeat: Infinity }}
-        className="absolute w-96 h-96 bg-cyan-500 rounded-full blur-3xl top-10 left-10"
-      />
+        className="absolute w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-cyan-500 rounded-full blur-3xl top-10 left-10"      />
 
       <motion.div
         animate={{
@@ -37,7 +36,7 @@ function Hero() {
           opacity: [0.2, 0.3, 0.2],
         }}
         transition={{ duration: 8, repeat: Infinity, delay: 2 }}
-        className="absolute w-96 h-96 bg-purple-500 rounded-full blur-3xl bottom-10 right-10"
+        className="absolute w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-purple-500 rounded-full blur-3xl bottom-10 right-10"
       />
 
       {/* Main Content */}
@@ -53,12 +52,11 @@ function Hero() {
   Welcome To My Portfolio
 </p>
 
-          <h1>
-            
-            <span className="bg-linear-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Muddaluru Jagadish Raju
-            </span>
-          </h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-tight">
+  <span className="bg-linear-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+    Muddaluru Jagadish Raju
+  </span>
+</h1>
 
           <p className="mt-6 text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed max-w-2xl">
   AI/ML Engineer • Full Stack Developer • AI Enthusiast
@@ -102,8 +100,7 @@ function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl text-black font-bold hover:shadow-lg hover:shadow-cyan-500/30 transition duration-300"
-              >
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl text-black font-bold hover:shadow-lg hover:shadow-cyan-500/30 transition duration-300"
                 View Resume
               </motion.button>
             </a>
@@ -116,7 +113,7 @@ function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-400 rounded-2xl text-cyan-400 font-semibold hover:bg-cyan-400 hover:text-black transition duration-300"
+                className="w-full sm:w-auto px-8 py-4 border border-cyan-400 rounded-2xl text-cyan-400 font-semibold hover:bg-cyan-400 hover:text-black transition duration-300"
               >
                 Contact Me
               </motion.button>
@@ -149,9 +146,7 @@ function Hero() {
             <img
               src={profile}
               alt="Muddaluru Jagadish Raju"
-              className="relative w-72 h-72 md:w-96 md:h-96 object-cover rounded-full border-4 border-cyan-400 shadow-2xl shadow-cyan-500/40"
-            />
-          </motion.div>
+              className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full border-4 border-cyan-400 shadow-2xl shadow-cyan-500/40"
         </div>
       </motion.div>
 
