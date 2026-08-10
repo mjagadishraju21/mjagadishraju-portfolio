@@ -7,7 +7,7 @@ function Education() {
       degree: "Bachelor of Technology",
       field: "Computer Science Engineering (Artificial Intelligence & Machine Learning)",
       institution: "GITAM (Deemed to be University), Bengaluru Campus",
-      result: "CGPA: 8.08",
+      result: "CGPA: 8.16",
       details: [
         "Focused on Artificial Intelligence, Machine Learning and Software Development",
         "Built multiple AI, Computer Vision and Full Stack projects",
