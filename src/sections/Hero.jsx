@@ -9,7 +9,7 @@ function Hero() {
 
   const stats = [
     { icon: FiCode, label: "Projects", value: "5+" },
-    { icon: FiTrendingUp, label: "CGPA", value: "8.08" },
+    { icon: FiTrendingUp, label: "CGPA", value: "8.16" },
     { icon: FiZap, label: "Certificates", value: "7+" },
   ]
 
