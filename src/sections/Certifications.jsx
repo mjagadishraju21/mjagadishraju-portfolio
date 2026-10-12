@@ -4,6 +4,7 @@ import certificateIcon from "../assets/icons/certificate.svg"
 import nccLogo from "../assets/logos/ncc.png"
 import nccA from "../assets/certificates/ncc-a.pdf"
 import nccB from "../assets/certificates/ncc-b.pdf"
+import nccC from "../assets/certificates/ncc-c.pdf"
 
 const nccCertificates = [
   {
