@@ -159,7 +159,6 @@ function Certifications() {
           </motion.h3>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
-
             {nccCertificates.map((certificate, index) => (
               <motion.div
                 key={index}
@@ -168,7 +167,9 @@ function Certifications() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -8 }}
-                className="group backdrop-blur-xl bg-white/5 border border-cyan-400/20 rounded-3xl p-5 sm:p-6 md:p-8 hover:border-cyan-400/50 transition duration-300 shadow-[0_0_30px_rgba(34,211,238,0.08)]"
+                className={`group backdrop-blur-xl bg-white/5 border border-cyan-400/20 rounded-3xl p-5 sm:p-6 md:p-8 hover:border-cyan-400/50 transition duration-300 shadow-[0_0_30px_rgba(34,211,238,0.08)] ${
+  index === 2 ? "lg:col-span-2 lg:mx-auto lg:w-1/2" : ""
+}`}
               >
 
                 <div className="mb-6">
