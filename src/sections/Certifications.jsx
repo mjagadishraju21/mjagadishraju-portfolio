@@ -15,6 +15,10 @@ const nccCertificates = [
     title: "NCC B Certificate",
     file: nccB,
   },
+  {
+    title: "NCC C Certificate",
+    file: nccC,
+  },
 ]
 
 function Certifications() {
